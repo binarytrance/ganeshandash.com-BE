@@ -15,6 +15,11 @@ export default {
             type: 'text',
         },
         {
+            name: 'current',
+            title: 'Current Activity',
+            type: 'string',
+        },
+        {
             name: 'link',
             title: 'Page Link',
             type: 'url',
@@ -23,6 +28,11 @@ export default {
             name: 'slug',
             title: 'Slug',
             type: 'slug',
+            description: 'Slugified text',
+            options: {
+                source: 'name',
+                maxLength: 100
+            }
         },
         {
             name: 'image',
