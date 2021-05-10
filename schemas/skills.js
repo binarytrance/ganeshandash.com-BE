@@ -1,3 +1,4 @@
+import image from './image';
 export default {
     name: 'skills',
     title: 'Skills',
@@ -37,23 +38,9 @@ export default {
         },
         {
             name: 'image',
-            title: 'Image', // this is human readable
-            type: 'image',
-            options: {
-                hotspot: true
-            },
-            fields: [
-                {
-                    name: 'caption',
-                    type: 'string',
-                    title: 'Caption',
-                    options: {
-                      isHighlighted: true // <-- make this field easily accessible
-                    },
-                    validation: Rule => Rule.required().min(5).max(80)
-                  }
-            ]
-        },
+            title: 'Image',
+            type: 'image'
+        }
 
     ]
 }
