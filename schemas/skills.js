@@ -1,4 +1,4 @@
-import image from './image';
+import mainImage from './mainImage';
 export default {
     name: 'skills',
     title: 'Skills',
@@ -37,7 +37,7 @@ export default {
             }
         },
         {
-            name: 'image',
+            name: 'mainImage',
             title: 'Image',
             type: 'image'
         }

@@ -10,6 +10,27 @@ export default {
 
         },
         {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            description: 'Slugified text',
+            options: {
+                source: 'title',
+                maxLength: 100
+            }
+        },
+        {
+            name: "publishedAt",
+            type: "datetime",
+            title: "Published at",
+            description: "This can be used to schedule post for publishing",
+          },
+          {
+            name: 'mainImage',
+            type: 'image',
+            title: 'Main Image'
+          },
+        {
             name: 'summary',
             title: 'A short sumary',
             type: 'text',
@@ -22,15 +43,21 @@ export default {
             type: 'array',
             of: [{type: 'block'}, {type: 'image'}]
           },
+          // {
+          //   title: 'Tags',
+          //   name: 'tags',
+          //   type: 'array',
+          //   of: [{type: 'string'}],
+          //   options: {
+          //     layout: 'tags'
+          //   },
+          //   validation: Rule => Rule.required().min(1).unique()
+          // },
           {
-            title: 'Tags',
             name: 'tags',
+            title: 'Tags',
             type: 'array',
-            of: [{type: 'string'}],
-            options: {
-              layout: 'tags'
-            },
-            validation: Rule => Rule.required().min(1).unique()
-          }
+            of: [{type: 'reference', to: [{type: 'articleTags'}]}]
+        }
     ]
 }
